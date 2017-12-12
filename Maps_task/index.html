@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maps</title>
+	<script src="js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<form name="mapsForm" onsubmit="codeAddress()">
+	  First name:<br>
+	  <input id="firstName" type="text" name="firstname" required><br>
+	  Last name:<br>
+	  <!-- Add required -->
+	  <input id="lastName" type="text" name="lastname" required><br>
+	  Adress:<br>
+	  <input id="address" type="text" name="address" required><br>
+	  Email:<br>
+	  <input id="email" type="email" name="email" required><br>
+	  Phone Number:<br>
+	  <input id="phoneNumber" type="text" name="phoneNumber" pattern="[0]{1}[0-9]{9}" required><br>
+	  Website:<br>
+	  <input id="website" type="text" name="website"  pattern="/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
+		" required><br>
+
+	  <input id='submit' type="button" value="Submit">
+	</form> 
+
+	<h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script src="js/mapAPIscript.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC36TPfjya3Tza0jIh6v8QjBTG92eZ_P_c&callback=initMap">
+    </script>
+
+	
+</body>
+</html>
